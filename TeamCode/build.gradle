@@ -1,0 +1,33 @@
+//
+// build.gradle in TeamCode
+//
+// Most of the definitions for building your module reside in a common, shared
+// file 'build.common.gradle'. Being factored in this way makes it easier to
+// integrate updates to the FTC into your code. If you really need to customize
+// the build definitions, you can place those customizations in this file, but
+// please think carefully as to whether such customizations are really necessary
+// before doing so.
+// Custom definitions may go here
+// Include common definitions from above.
+apply from: '../build.common.gradle'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    //compile files('../libs/Vuforia.jar')
+    compile files('C:/ftc v3.1/ftc_app/libs/circe-crc-0.1-SNAPSHOT.jar')
+    compile files('C:/ftc v3.1/ftc_app/libs/circe-api-0.1-SNAPSHOT.jar')
+    compile files('C:/ftc v3.1/ftc_app/libs/circe-cache-0.1-SNAPSHOT.jar')
+    compile files('C:/ftc v3.1/ftc_app/libs/circe-common-0.1-SNAPSHOT.jar')
+    compile files('C:/ftc v3.1/ftc_app/libs/circe-crc32c-sse42-0.1-SNAPSHOT.jar')
+    compile files('C:/ftc v3.1/ftc_app/libs/circe-digest-0.1-SNAPSHOT.jar')
+    compile files('C:/ftc v3.1/ftc_app/libs/circe-direct-access-0.1-SNAPSHOT.jar')
+    compile files('C:/ftc v3.1/ftc_app/libs/circe-guava-0.1-SNAPSHOT.jar')
+    compile files('C:/ftc v3.1/ftc_app/libs/circe-impl-0.1-SNAPSHOT.jar')
+    compile 'com.google.guava:guava:23.0-android'
+}
+android {
+    buildToolsVersion '25.0.3'
+}
